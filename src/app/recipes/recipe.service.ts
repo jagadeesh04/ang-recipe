@@ -4,7 +4,7 @@ import { Recipe } from "./recipe.model";
 
 export class RecipeService {
 
-    recipeSelected = new EventEmitter
+    recipeSelected = new EventEmitter<Recipe>();
 
 
     private recipes: Recipe[] = [
