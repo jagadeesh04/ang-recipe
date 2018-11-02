@@ -26,7 +26,7 @@ export class ShoppingListService{
         //   }     
         // ... is for pushing an array into another array
         this.ingredients.push(...ingredients);
-        
+        this.ingredientsChanged.emit(this.ingredients.slice());
     }
 
 }
