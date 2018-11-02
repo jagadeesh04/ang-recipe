@@ -1,6 +1,7 @@
 import { EventEmitter } from "@angular/core";
 
 import { Recipe } from "./recipe.model";
+import { Ingredient } from "../shared/ingredient.model";
 
 export class RecipeService {
 
@@ -8,10 +9,22 @@ export class RecipeService {
 
 
     private recipes: Recipe[] = [
-        new Recipe('A Test Recipe', 'This is simply a test', 
-        'https://cdn.pixabay.com/photo/2017/07/16/10/43/recipe-2508859_960_720.jpg'),
-        new Recipe('An another Test Recipe', 'This is simply a test', 
-        'https://upload.wikimedia.org/wikipedia/commons/7/7a/Hyderabadi_Vegetable_Biryani.jpg')
+        new Recipe(
+            'Dosa', 
+            'This is Dosa', 
+            'https://get.pxhere.com/photo/dish-meal-food-produce-fish-breakfast-cuisine-hong-kong-asian-food-vegetarian-indian-chinese-food-dim-sum-egg-roll-southeast-asian-food-indian-cuisine-lumpia-taquito-nem-r-n-spring-roll-786750.jpg',
+            [
+                new Ingredient('Dosa Pindi', 2),
+                new Ingredient('Potato', 4)
+            ]),
+        new Recipe(
+            'Rice', 
+            'This is Rice', 
+            'https://upload.wikimedia.org/wikipedia/commons/7/7a/Hyderabadi_Vegetable_Biryani.jpg',
+            [
+                new Ingredient('Rice', 2),
+                new Ingredient('Coconut', 1)
+            ])
       ];
 
       getRecipes(){
