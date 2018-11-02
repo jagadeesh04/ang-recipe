@@ -1,5 +1,6 @@
 import { Ingredient } from "../shared/ingredient.model";
 import { EventEmitter } from "@angular/core";
+import { spread } from "q";
 
 export class ShoppingListService{
     
@@ -18,5 +19,14 @@ export class ShoppingListService{
             this.ingredients.push(ingredient);
             this.ingredientsChanged.emit(this.ingredients.slice());
       }
+
+      addIngredients(ingredients: Ingredient[]): any {
+        //   for(let ingredient of ingredients){
+        //     this.ingredients.push(ingredient);
+        //   }     
+        // ... is for pushing an array into another array
+        this.ingredients.push(...ingredients);
+        
+    }
 
 }
