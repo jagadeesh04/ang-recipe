@@ -10,11 +10,12 @@ export class ShoppingListComponent implements OnInit {
 
   ingredients: Ingredient[];
 
-  constructor() { }
+  constructor(private slService:) { }
 
   ngOnInit() {
   }
   onIngredientAdded(ingredient: Ingredient){
       this.ingredients.push(ingredient);
+      console.log("test git commit");
   }
 }
